@@ -1,0 +1,153 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #293133;
+}
+
+.wg-header {
+    height: 4rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    margin-top: -1.5rem;
+    font-family: 'Arial';
+    color: rgba(255,255,255, 0.9);
+    background-color:rgba(0,0, 0,0.1);
+    border-bottom: 1px solid rgba(0,0, 0,0.2);
+}
+
+.wg-main {
+    height: calc(100% - 5rem);
+    overflow: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.wg-guesses {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: .5s;
+}
+
+.wg-guess {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.wg-char {
+    transition: .2s;
+    border: 0.1rem solid rgba(255,255, 255,0.3);
+    border-radius: 5px;
+    height: 4rem;
+    width: 4rem;
+    color: rgba(255,255,255, 0.9);
+    font-family: 'Arial';
+    font-size: 38pt;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: 0.5rem;
+    line-height: 4.2rem;
+}
+
+.wg-char-correct {
+    background-color: #1f9c00;
+}
+
+.wg-char-submitted {
+    background-color: rgba(255,255,255, 0.1);
+}
+
+.wg-char-in-word {
+    background-color: #9c8f00;
+}
+
+.wg-button {
+    background-color: rgba(255,255, 255,0.1);
+    transition: .2s;
+    border: 0.1rem solid rgba(255,255, 255,0.3);
+    border-radius: 5px;
+    color: rgba(255,255,255, 0.9);
+    font-family: 'Arial';
+    font-size: 18pt;
+    padding: 0.4rem;
+    cursor: pointer;
+}
+
+.wg-button:hover {
+    background-color: rgba(255,255, 255,0.2);
+    
+}
+
+.wg-button:active {
+    background-color: rgba(255,255, 255,0.8);
+
+}
+
+
+
+.wg-ready-buttons {
+    margin-top: 5rem;
+}
+
+.wg-new-word {
+    position:absolute;
+    background-color: rgba(255,255, 255,0.05);
+    transition: .2s;
+    border: 0.1rem solid rgba(255,255, 255,0.1);
+    right: 0.75rem;
+    top: 0.75rem;
+}
+
+.wg-toast {
+    background-color: rgba(255,255, 255,0.1);
+    transition: .2s;
+    border: 0.1rem solid rgba(255,255, 255,0.3) !important;
+    border-radius: 5px !important;
+    color: rgba(255,255,255, 0.9);
+    font-family: 'Arial';
+    font-size: 14pt;
+    box-shadow: none !important;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: #008080;
+  }
+  
+  ::selection {
+    color: white;
+    background: #008080;
+  }
+  
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  

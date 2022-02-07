@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess It!</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="javascript/library.js" defer></script>
+    <script src="javascript/main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</head>
+<body>
+    <header class="wg-header">
+        <h1 class="hover-underline-animation">Guess It!</h1>
+        <button class="wg-button wg-new-word" onclick="onNewWord()">new word</button>
+    </header>
+    <main class="wg-main">
+        <div class="wg-guesses">
+          
+        </div>
+        <div class="wg-ready-buttons">
+            <button id="share" style="opacity: 0;" class="wg-button" onclick="onShare()"><img style="height: 1.5rem; margin-bottom: -0.25rem;" src="image/share_white_24dp.svg"><img> <span id="share-text">share</span></button>
+        </div>
+    </main>
+</body>
+</html>
