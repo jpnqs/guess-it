@@ -235,7 +235,13 @@ function get(url) {
     return new Promise(resolve => {
         
         $.get(url, (res) => {
-            resolve(res.split('\r\n'));
+            var splits;
+            if (res.includes('\r\n')) {
+                splits = res.split('\r\n')
+            } else {
+                splits = res.split('\n')
+            }
+            resolve(splits);
         })
 
     });
