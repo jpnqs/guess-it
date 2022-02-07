@@ -243,8 +243,8 @@ function get(url) {
     
 function getWords() {
     return Promise.all([
-        get('/guess-list.txt'),
-        get('/word-list.txt')
+        get('guess-list.txt'),
+        get('word-list.txt')
     ]);
 }
 
