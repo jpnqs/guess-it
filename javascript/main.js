@@ -261,7 +261,7 @@ function onNewWord() {
 
     var code = encodeWord(word);
 
-    var newLink = `${location.origin}?w=${code}`;
+    var newLink = `${location.href.replace(/\?.+$/, '')}?w=${code}`;
 
     window.location = newLink;
 
