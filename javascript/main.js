@@ -87,17 +87,36 @@ getWords().then(res => {
         }
 
 
-        checkGuess();
-    
-        tryCursor++;
-        charCursor = 0;
+        if (checkGuess()) {
+            tryCursor++;
+            charCursor = 0;
+        }
     
     
     }
     
     function checkGuess() {
         
+        let guessAsWord = '';
+        let checkWordInList = true;
+
         let actTry = tries[tryCursor];
+
+        actTry.forEach(el => {
+            if (el) {
+                guessAsWord += el.char;
+            } else {
+                checkWordInList = false;
+            }
+        });
+
+        if (checkWordInList) {
+            if (!guessList.includes(guessAsWord)) {
+                messageToast(`Sorry, "${guessAsWord}" is not in our database\nTry another one!`);
+                return;
+            }
+        }
+
         let actTryWord = '';
         let notReady = false;
     
@@ -130,10 +149,19 @@ getWords().then(res => {
     
         if (actTryWord == word) {
             onWin();
+        } else if (tryCursor + 1 == triesAmount) {
+            messageToast("Sorry, you have no tries left!")
+            
+            var share = document.getElementById('share');
+
+            document.getElementById('share-text').innerText = 'share score';
+            share.onclick = onShareScore;
+
         } else {
             messageToast("Guess submitted!");
         }
         
+        return true;
     
     }
     
