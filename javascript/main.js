@@ -285,14 +285,14 @@ function onShareScore() {
         row.forEach(g => {
 
             switch(g.state) {
-                case charState.notInWord:
-                    out += '⬛';
-                    break;
                 case charState.inWord:
                     out += '🟨';
                     break;
                 case charState.correct:
                     out += '🟩';
+                    break;
+                default:
+                    out += '⬛';
                     break;
             }
 
