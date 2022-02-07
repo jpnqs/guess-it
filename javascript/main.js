@@ -243,6 +243,7 @@ function get(url) {
     
 function getWords() {
     return Promise.all([
+        // Load sources
         get('guess-list.txt'),
         get('word-list.txt')
     ]);
