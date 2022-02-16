@@ -4,6 +4,10 @@ var gl;
 var w;
 let tries;
 
+var submitCharGlobal;
+var submitGuessGlobal;
+var removeCharGlobal;
+
 const charState = {
     notInWord: 0,
     inWord: 1,
@@ -78,6 +82,8 @@ getWords().then(res => {
         updateActiveGuess();
     
     }
+
+    removeCharGlobal = removeChar;
     
     function submitGuess() {
     
@@ -94,6 +100,8 @@ getWords().then(res => {
     
     
     }
+
+    submitGuessGlobal = submitGuess;
     
     function checkGuess() {
         
@@ -184,7 +192,7 @@ getWords().then(res => {
         updateActiveGuess();
     
     }
-    
+    submitCharGlobal= submitChar;
     function updateActiveGuess() {
     
         let chars = tries[tryCursor];
@@ -349,5 +357,11 @@ function toClipboard(txt) {
 
     console.log(txt);
     navigator.clipboard.writeText(txt);
+
+}
+
+function charTouchInput(event) {
+
+    submitCharGlobal(event.innerText)
 
 }

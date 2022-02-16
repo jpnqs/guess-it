@@ -28,7 +28,7 @@ function messageToast(msg) {
         text: msg,
         duration: 3000,
         close: false,
-        gravity: "bottom", // `top` or `bottom`
+        gravity: "top", // `top` or `bottom`
         position: "center", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         className: 'wg-toast',
