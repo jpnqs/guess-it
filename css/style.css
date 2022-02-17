@@ -46,8 +46,10 @@ html, body {
     transition: .2s;
     border: 0.1rem solid rgba(255,255, 255,0.3);
     border-radius: 5px;
-    height: 4rem;
-    width: 4rem;
+    height: 18vh;
+    width: 18vh;
+    max-height: 4rem;
+    max-width: 4rem;
     color: rgba(255,255,255, 0.9);
     font-family: 'Arial';
     font-size: 38pt;
@@ -94,7 +96,7 @@ html, body {
 
 
 .wg-ready-buttons {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .wg-new-word {
@@ -174,5 +176,6 @@ html, body {
 }
 
 .wg-touch-input {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
+    align-self: center;    
 }
